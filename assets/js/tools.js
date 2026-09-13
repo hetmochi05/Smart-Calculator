@@ -14,6 +14,11 @@ function showScreen(id) {
     if (id === 'calcScreen') {
         renderResult(currentValue);
     }
+    // Graphing's canvas has zero size while hidden, so it must be
+    // (re)sized only once it's actually visible.
+    if (id === 'graphScreen' && typeof onShowGraphScreen === 'function') {
+        onShowGraphScreen();
+    }
 }
 
 const openHubBtn = document.getElementById('openHubBtn');
