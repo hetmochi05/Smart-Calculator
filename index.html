@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Smart Calculator | Basic, Scientific, Age & Currency Calculator</title>
+    <title>Smart Calculator</title>
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="Smart Calculator - Basic, Scientific, Age & Currency Calculator">
@@ -242,7 +242,7 @@
                     <span>Age Calculator</span>
                 </div>
                 <div class="title-right">
-                        <button type="button" data-back="hubScreen" aria-label="Back to menu" title="Back to All Modes">
+                    <button type="button" data-back="hubScreen" aria-label="Back to menu" title="Back to All Modes">
                         <i class="fa-solid fa-arrow-left"></i>
                     </button>
                 </div>
@@ -300,7 +300,7 @@
                     <span>Currency Calculator</span>
                 </div>
                 <div class="title-right">
-                    <button type="button" data-back aria-label="Back to calculator" title="Back to Calculator">
+                    <button type="button" data-back="hubScreen" aria-label="Back to menu" title="Back to All Modes">
                         <i class="fa-solid fa-arrow-left"></i>
                     </button>
                 </div>
@@ -356,7 +356,7 @@
                 </div>
             </main>
 
-                </div>
+        </div>
 
         <!-- ================= HUB (ALL MODES) SCREEN ================= -->
 
@@ -386,8 +386,7 @@
                                 <span class="hub-item-label">Standard</span>
                                 <i class="fa-solid fa-chevron-right hub-item-chevron"></i>
                             </button>
-                            <button type="button" class="hub-item" data-target="calcScreen"
-                                data-set-mode="scientific">
+                            <button type="button" class="hub-item" data-target="calcScreen" data-set-mode="scientific">
                                 <i class="fa-solid fa-square-root-variable hub-item-icon"></i>
                                 <span class="hub-item-label">Scientific</span>
                                 <i class="fa-solid fa-chevron-right hub-item-chevron"></i>
@@ -415,95 +414,71 @@
                     </div>
 
                     <div class="hub-section">
-                        <h3 class="hub-section-title">Converter</h3>
+                                               <h3 class="hub-section-title">Converter</h3>
                         <div class="hub-list">
                             <button type="button" class="hub-item" data-target="currencyScreen">
                                 <i class="fa-solid fa-money-bill-transfer hub-item-icon"></i>
                                 <span class="hub-item-label">Currency</span>
                                 <i class="fa-solid fa-chevron-right hub-item-chevron"></i>
                             </button>
-                            <button type="button" class="hub-item" data-coming-soon="Volume"
-                                data-coming-icon="fa-solid fa-flask">
+                            <button type="button" class="hub-item" data-target="converterScreen" data-converter-type="volume">
                                 <i class="fa-solid fa-flask hub-item-icon"></i>
                                 <span class="hub-item-label">Volume</span>
-                                <span class="hub-item-badge">Soon</span>
                                 <i class="fa-solid fa-chevron-right hub-item-chevron"></i>
                             </button>
-                            <button type="button" class="hub-item" data-coming-soon="Length"
-                                data-coming-icon="fa-solid fa-ruler">
+                            <button type="button" class="hub-item" data-target="converterScreen" data-converter-type="length">
                                 <i class="fa-solid fa-ruler hub-item-icon"></i>
                                 <span class="hub-item-label">Length</span>
-                                <span class="hub-item-badge">Soon</span>
                                 <i class="fa-solid fa-chevron-right hub-item-chevron"></i>
                             </button>
-                            <button type="button" class="hub-item" data-coming-soon="Weight and Mass"
-                                data-coming-icon="fa-solid fa-weight-hanging">
+                            <button type="button" class="hub-item" data-target="converterScreen" data-converter-type="weight">
                                 <i class="fa-solid fa-weight-hanging hub-item-icon"></i>
                                 <span class="hub-item-label">Weight and Mass</span>
-                                <span class="hub-item-badge">Soon</span>
                                 <i class="fa-solid fa-chevron-right hub-item-chevron"></i>
                             </button>
-                            <button type="button" class="hub-item" data-coming-soon="Temperature"
-                                data-coming-icon="fa-solid fa-temperature-half">
+                            <button type="button" class="hub-item" data-target="converterScreen" data-converter-type="temperature">
                                 <i class="fa-solid fa-temperature-half hub-item-icon"></i>
                                 <span class="hub-item-label">Temperature</span>
-                                <span class="hub-item-badge">Soon</span>
                                 <i class="fa-solid fa-chevron-right hub-item-chevron"></i>
                             </button>
-                            <button type="button" class="hub-item" data-coming-soon="Energy"
-                                data-coming-icon="fa-solid fa-bolt">
+                            <button type="button" class="hub-item" data-target="converterScreen" data-converter-type="energy">
                                 <i class="fa-solid fa-bolt hub-item-icon"></i>
                                 <span class="hub-item-label">Energy</span>
-                                <span class="hub-item-badge">Soon</span>
                                 <i class="fa-solid fa-chevron-right hub-item-chevron"></i>
                             </button>
-                            <button type="button" class="hub-item" data-coming-soon="Area"
-                                data-coming-icon="fa-solid fa-vector-square">
+                            <button type="button" class="hub-item" data-target="converterScreen" data-converter-type="area">
                                 <i class="fa-solid fa-vector-square hub-item-icon"></i>
                                 <span class="hub-item-label">Area</span>
-                                <span class="hub-item-badge">Soon</span>
                                 <i class="fa-solid fa-chevron-right hub-item-chevron"></i>
                             </button>
-                            <button type="button" class="hub-item" data-coming-soon="Speed"
-                                data-coming-icon="fa-solid fa-gauge-high">
+                            <button type="button" class="hub-item" data-target="converterScreen" data-converter-type="speed">
                                 <i class="fa-solid fa-gauge-high hub-item-icon"></i>
                                 <span class="hub-item-label">Speed</span>
-                                <span class="hub-item-badge">Soon</span>
                                 <i class="fa-solid fa-chevron-right hub-item-chevron"></i>
                             </button>
-                            <button type="button" class="hub-item" data-coming-soon="Time"
-                                data-coming-icon="fa-solid fa-stopwatch">
+                            <button type="button" class="hub-item" data-target="converterScreen" data-converter-type="time">
                                 <i class="fa-solid fa-stopwatch hub-item-icon"></i>
                                 <span class="hub-item-label">Time</span>
-                                <span class="hub-item-badge">Soon</span>
                                 <i class="fa-solid fa-chevron-right hub-item-chevron"></i>
                             </button>
-                            <button type="button" class="hub-item" data-coming-soon="Power"
-                                data-coming-icon="fa-solid fa-plug">
+                            <button type="button" class="hub-item" data-target="converterScreen" data-converter-type="power">
                                 <i class="fa-solid fa-plug hub-item-icon"></i>
                                 <span class="hub-item-label">Power</span>
-                                <span class="hub-item-badge">Soon</span>
                                 <i class="fa-solid fa-chevron-right hub-item-chevron"></i>
                             </button>
-                            <button type="button" class="hub-item" data-coming-soon="Data"
-                                data-coming-icon="fa-solid fa-database">
+                            <button type="button" class="hub-item" data-target="converterScreen" data-converter-type="data">
                                 <i class="fa-solid fa-database hub-item-icon"></i>
                                 <span class="hub-item-label">Data</span>
-                                <span class="hub-item-badge">Soon</span>
                                 <i class="fa-solid fa-chevron-right hub-item-chevron"></i>
                             </button>
-                            <button type="button" class="hub-item" data-coming-soon="Pressure"
-                                data-coming-icon="fa-solid fa-gauge">
+                            <button type="button" class="hub-item" data-target="converterScreen" data-converter-type="pressure">
                                 <i class="fa-solid fa-gauge hub-item-icon"></i>
                                 <span class="hub-item-label">Pressure</span>
-                                <span class="hub-item-badge">Soon</span>
                                 <i class="fa-solid fa-chevron-right hub-item-chevron"></i>
                             </button>
-                            <button type="button" class="hub-item" data-coming-soon="Angle"
-                                data-coming-icon="fa-solid fa-angle-right">
+                            <button type="button" class="hub-item" data-target="converterScreen" data-converter-type="angle">
                                 <i class="fa-solid fa-angle-right hub-item-icon"></i>
                                 <span class="hub-item-label">Angle</span>
-                                <span class="hub-item-badge">Soon</span>
                                 <i class="fa-solid fa-chevron-right hub-item-chevron"></i>
                             </button>
                         </div>
@@ -527,6 +502,55 @@
 
         </div>
 
+        <!-- ================= UNIT CONVERTER (generic) SCREEN ================= -->
+
+        <div id="converterScreen" class="screen tool-screen">
+
+            <header class="title-bar">
+                <div class="title-left">
+                    <i id="converterIcon" class="fa-solid fa-ruler app-icon"></i>
+                    <span id="converterTitle">Length</span>
+                </div>
+                <div class="title-right">
+                    <button type="button" data-back="hubScreen" aria-label="Back to menu" title="Back to All Modes">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
+            </header>
+
+            <main class="tool-content">
+                <div class="tool-card">
+
+                    <label class="tool-label" for="converterAmount">Amount</label>
+                    <input type="number" id="converterAmount" class="tool-input" value="1" step="any"
+                        inputmode="decimal" autocomplete="off">
+
+                    <div class="currency-row">
+                        <div class="currency-field">
+                            <label class="tool-label" for="converterFrom">From</label>
+                            <select id="converterFrom" class="tool-select"></select>
+                        </div>
+
+                        <button type="button" id="converterSwapBtn" class="currency-swap-btn" aria-label="Swap units"
+                            title="Swap units">
+                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        </button>
+
+                        <div class="currency-field">
+                            <label class="tool-label" for="converterTo">To</label>
+                            <select id="converterTo" class="tool-select"></select>
+                        </div>
+                    </div>
+
+                    <div class="tool-result">
+                        <div class="tool-result-main" id="converterResultMain"></div>
+                    </div>
+
+                </div>
+            </main>
+
+        </div>
+
         <!-- ================= COMING SOON (placeholder) SCREEN ================= -->
 
         <div id="comingSoonScreen" class="screen tool-screen">
@@ -537,7 +561,8 @@
                     <span id="comingSoonTitle">Coming Soon</span>
                 </div>
                 <div class="title-right">
-                    <button type="button" data-back="hubScreen" aria-label="Back to all modes" title="Back to All Modes">
+                    <button type="button" data-back="hubScreen" aria-label="Back to all modes"
+                        title="Back to All Modes">
                         <i class="fa-solid fa-arrow-left"></i>
                     </button>
                 </div>
@@ -561,6 +586,7 @@
     <script src="assets/js/keyboard.js"></script>
     <script src="assets/js/tools.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/converters.js"></script>
 
 </body>
 

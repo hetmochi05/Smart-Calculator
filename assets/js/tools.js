@@ -33,8 +33,11 @@ document.querySelectorAll('.hub-item').forEach(item => {
         const target = item.getAttribute('data-target');
         const mode = item.getAttribute('data-set-mode');
         const comingSoonName = item.getAttribute('data-coming-soon');
+        const converterType = item.getAttribute('data-converter-type');
 
-        if (target) {
+        if (converterType) {
+            openConverter(converterType);
+        } else if (target) {
             if (mode) setCalculatorMode(mode);
             showScreen(target);
         } else if (comingSoonName) {
@@ -59,7 +62,9 @@ function openComingSoon(name, iconClass) {
     showScreen('comingSoonScreen');
 }
 
+// ==================================================
 // ================= Age Calculator =================
+// ==================================================
 
 const ageBirthDateEl = document.getElementById('ageBirthDate');
 const ageAsOfDateEl = document.getElementById('ageAsOfDate');
@@ -260,8 +265,9 @@ if (ageCalculateBtn) ageCalculateBtn.addEventListener('click', calculateAge);
 if (ageBirthDateEl) ageBirthDateEl.addEventListener('change', calculateAge);
 if (ageAsOfDateEl) ageAsOfDateEl.addEventListener('change', calculateAge);
 
-
+// =======================================================
 // ================= Currency Calculator =================
+// =======================================================
 
 const CURRENCY_NAMES = {
     USD: 'US Dollar', EUR: 'Euro', GBP: 'British Pound', JPY: 'Japanese Yen',
