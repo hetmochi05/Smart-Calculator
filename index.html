@@ -396,11 +396,9 @@
                                 <span class="hub-item-label">Graphing</span>
                                 <i class="fa-solid fa-chevron-right hub-item-chevron"></i>
                             </button>
-                            <button type="button" class="hub-item" data-coming-soon="Programmer"
-                                data-coming-icon="fa-solid fa-code">
+                            <button type="button" class="hub-item" data-target="programmerScreen">
                                 <i class="fa-solid fa-code hub-item-icon"></i>
                                 <span class="hub-item-label">Programmer</span>
-                                <span class="hub-item-badge">Soon</span>
                                 <i class="fa-solid fa-chevron-right hub-item-chevron"></i>
                             </button>
                             <button type="button" class="hub-item" data-target="ageScreen">
@@ -604,6 +602,117 @@
 
         </div>
 
+        <!-- ================= PROGRAMMER SCREEN ================= -->
+
+        <div id="programmerScreen" class="screen tool-screen">
+
+            <header class="title-bar">
+                <div class="title-left">
+                    <i class="fa-solid fa-code app-icon"></i>
+                    <span>Programmer</span>
+                </div>
+                <div class="title-right">
+                    <button type="button" data-back="hubScreen" aria-label="Back to menu" title="Back to All Modes">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
+            </header>
+
+                      <main class="tool-content prog-content">
+
+                <div class="prog-settings-bar">
+                    <div class="prog-segmented">
+                        <button type="button" class="prog-word-tab" data-bits="8">BYTE</button>
+                        <button type="button" class="prog-word-tab" data-bits="16">WORD</button>
+                        <button type="button" class="prog-word-tab active" data-bits="32">DWORD</button>
+                        <button type="button" class="prog-word-tab" data-bits="64">QWORD</button>
+                    </div>
+                    <div class="prog-segmented">
+                        <button type="button" class="prog-base-tab" data-base="16">HEX</button>
+                        <button type="button" class="prog-base-tab active" data-base="10">DEC</button>
+                        <button type="button" class="prog-base-tab" data-base="8">OCT</button>
+                        <button type="button" class="prog-base-tab" data-base="2">BIN</button>
+                    </div>
+                </div>
+
+                <div class="prog-display">
+                    <div class="prog-display-main" id="progMainDisplay">0</div>
+                    <div class="prog-multi-base">
+                        <div class="prog-multi-row" id="progRowHex">
+                            <span class="prog-row-label">HEX</span>
+                            <span class="prog-row-value"></span>
+                        </div>
+                        <div class="prog-multi-row active" id="progRowDec">
+                            <span class="prog-row-label">DEC</span>
+                            <span class="prog-row-value"></span>
+                        </div>
+                        <div class="prog-multi-row" id="progRowOct">
+                            <span class="prog-row-label">OCT</span>
+                            <span class="prog-row-value"></span>
+                        </div>
+                        <div class="prog-multi-row" id="progRowBin">
+                            <span class="prog-row-label">BIN</span>
+                            <span class="prog-row-value"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prog-hex-row">
+                    <button type="button" class="prog-digit prog-hex-digit" data-digit="A">A</button>
+                    <button type="button" class="prog-digit prog-hex-digit" data-digit="B">B</button>
+                    <button type="button" class="prog-digit prog-hex-digit" data-digit="C">C</button>
+                    <button type="button" class="prog-digit prog-hex-digit" data-digit="D">D</button>
+                    <button type="button" class="prog-digit prog-hex-digit" data-digit="E">E</button>
+                    <button type="button" class="prog-digit prog-hex-digit" data-digit="F">F</button>
+                </div>
+
+                <div class="prog-bitwise-row">
+                    <button type="button" class="prog-bitop" data-op="AND">AND</button>
+                    <button type="button" class="prog-bitop" data-op="OR">OR</button>
+                    <button type="button" class="prog-bitop" data-op="XOR">XOR</button>
+                    <button type="button" class="prog-bitop" id="progNotBtn">NOT</button>
+                    <button type="button" class="prog-bitop" data-op="LSH">&lt;&lt;</button>
+                    <button type="button" class="prog-bitop" data-op="RSH">&gt;&gt;</button>
+                </div>
+
+                <div class="prog-keypad">
+                    <div class="prog-key-row">
+                        <button type="button" class="prog-util" id="progClearBtn">AC</button>
+                        <button type="button" class="prog-util" id="progClearEntryBtn">CE</button>
+                        <button type="button" class="prog-util" id="progBackspaceBtn" aria-label="Backspace">
+                            <i class="fa-solid fa-delete-left"></i>
+                        </button>
+                        <button type="button" class="prog-arith" data-op="/">&divide;</button>
+                    </div>
+                    <div class="prog-key-row">
+                        <button type="button" class="prog-digit" data-digit="7">7</button>
+                        <button type="button" class="prog-digit" data-digit="8">8</button>
+                        <button type="button" class="prog-digit" data-digit="9">9</button>
+                        <button type="button" class="prog-arith" data-op="*">&times;</button>
+                    </div>
+                    <div class="prog-key-row">
+                        <button type="button" class="prog-digit" data-digit="4">4</button>
+                        <button type="button" class="prog-digit" data-digit="5">5</button>
+                        <button type="button" class="prog-digit" data-digit="6">6</button>
+                        <button type="button" class="prog-arith" data-op="-">&minus;</button>
+                    </div>
+                    <div class="prog-key-row">
+                        <button type="button" class="prog-digit" data-digit="1">1</button>
+                        <button type="button" class="prog-digit" data-digit="2">2</button>
+                        <button type="button" class="prog-digit" data-digit="3">3</button>
+                        <button type="button" class="prog-arith" data-op="+">+</button>
+                    </div>
+                    <div class="prog-key-row prog-key-row-last">
+                        <button type="button" class="prog-digit" data-digit="0">0</button>
+                        <button type="button" class="prog-arith" data-op="%">MOD</button>
+                        <button type="button" id="progEqualsBtn" class="prog-equals">=</button>
+                    </div>
+                </div>
+
+            </main>
+
+        </div>
+
         <!-- ================= COMING SOON (placeholder) SCREEN ================= -->
 
         <div id="comingSoonScreen" class="screen tool-screen">
@@ -641,6 +750,7 @@
     <script src="assets/js/app.js"></script>
     <script src="assets/js/converters.js"></script>
     <script src="assets/js/graph.js"></script>
+    <script src="assets/js/programmer.js"></script>
 
 </body>
 

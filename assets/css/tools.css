@@ -427,6 +427,8 @@
    ========================================================== */
 
 .graph-content {
+    display: flex;
+    flex-direction: column;
     align-items: stretch;
     padding: 20px 20px 24px;
     gap: 10px;
@@ -516,4 +518,228 @@
     text-align: center;
     font-size: 12px;
     color: var(--muted);
+}
+
+
+/* ==========================================================
+   Programmer screen
+   ========================================================== */
+
+.prog-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding: 16px 16px 20px;
+}
+
+.prog-settings-bar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.prog-segmented {
+    flex: 1;
+    min-width: 160px;
+    display: flex;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 4px;
+}
+
+.prog-word-tab,
+.prog-base-tab {
+    flex: 1;
+    border: none;
+    background: transparent;
+    border-radius: 9px;
+    padding: 7px 4px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.prog-word-tab.active,
+.prog-base-tab.active {
+    background: var(--accent);
+    color: #1a1208;
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3);
+}
+
+.prog-display {
+    background: #101113;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 16px 20px;
+}
+
+.prog-display-main {
+    text-align: right;
+    font-family: "Courier New", monospace;
+    font-size: 34px;
+    font-weight: 300;
+    color: #fff;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.prog-multi-base {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.prog-multi-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.prog-multi-row .prog-row-label {
+    width: 30px;
+    flex-shrink: 0;
+    color: var(--muted);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.prog-multi-row .prog-row-value {
+    flex: 1;
+    text-align: right;
+    font-family: "Courier New", monospace;
+    color: var(--muted);
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.prog-multi-row.active .prog-row-label,
+.prog-multi-row.active .prog-row-value {
+    color: var(--accent);
+}
+
+.prog-hex-row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+}
+
+.prog-hex-digit {
+    padding: 10px 2px;
+    font-size: 15px;
+}
+
+.prog-bitwise-row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+}
+
+.prog-bitop {
+    padding: 9px 2px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 152, 0, 0.35);
+    background: rgba(255, 152, 0, 0.08);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.prog-bitop:hover,
+.prog-bitop:active {
+    background: rgba(255, 152, 0, 0.18);
+}
+
+.prog-keypad {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.prog-key-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.prog-digit,
+.prog-arith,
+.prog-util,
+.prog-equals {
+    border: none;
+    border-radius: 14px;
+    min-height: 46px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.prog-digit {
+    background: linear-gradient(#363944, #2d3038);
+    color: #fff;
+    box-shadow: inset 0 1px rgba(255, 255, 255, .08), 0 4px 10px rgba(0, 0, 0, .2);
+}
+
+.prog-digit:hover {
+    background: linear-gradient(#424755, #363944);
+}
+
+.prog-digit:active {
+    transform: scale(.96);
+}
+
+.prog-digit-disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+}
+
+.prog-digit-disabled:hover {
+    background: linear-gradient(#363944, #2d3038) !important;
+}
+
+.prog-arith,
+.prog-equals {
+    background: linear-gradient(#ffb63a, #ff9800);
+    color: #fff;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.prog-arith:hover,
+.prog-equals:hover {
+    box-shadow: 0 0 18px rgba(255, 152, 0, .4);
+}
+
+.prog-arith:active,
+.prog-equals:active {
+    transform: scale(.96);
+}
+
+.prog-util {
+    background: linear-gradient(#4a383b, #3b2c2e);
+    color: #ff7777;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.prog-util:hover {
+    filter: brightness(1.15);
+}
+
+.prog-key-row-last .prog-equals {
+    grid-column: span 2;
 }
